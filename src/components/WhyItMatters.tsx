@@ -42,9 +42,21 @@ const WhyItMatters = () => {
               <h3 className="text-2xl font-semibold text-foreground mb-4">
                 But how do you know what your body really needs?
               </h3>
-              <p className="text-xl text-primary font-medium">
+              <p className="text-xl text-primary font-medium mb-6">
                 Dr.Holesto gives you the answer.
               </p>
+              <div className="text-lg text-foreground leading-relaxed space-y-4">
+                <p>
+                  We make food choices every day — but no one tells us if these choices are right for our <strong>own body</strong>.
+                </p>
+                <p>
+                  <strong>Dr.Holesto</strong> helps you understand your bloodwork and connects it to your meals, so your health decisions are based on data, not guesswork.
+                </p>
+                <p>
+                  It works in <strong>any language</strong> — English, Russian, Hebrew, Arabic, Japanese and more.<br />
+                  No signup, no app — just Telegram.
+                </p>
+              </div>
             </CardContent>
           </Card>
         </div>

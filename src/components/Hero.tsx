@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-trust-blue to-secondary px-6 py-20">
+    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-trust-blue to-secondary px-6 py-20 pt-32">
       <div className="container mx-auto max-w-6xl">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
