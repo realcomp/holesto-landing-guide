@@ -37,70 +37,9 @@ const Header = () => {
             Dr.Holesto
           </button>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            <button 
-              onClick={() => scrollToSection('how-it-works')}
-              className="text-foreground hover:text-primary transition-colors"
-            >
-              How It Works
-            </button>
-            <button 
-              onClick={() => scrollToSection('why-it-matters')}
-              className="text-foreground hover:text-primary transition-colors"
-            >
-              Why This Matters
-            </button>
-            <button 
-              onClick={() => scrollToSection('sample-responses')}
-              className="text-foreground hover:text-primary transition-colors"
-            >
-              Sample Responses
-            </button>
-            <button 
-              onClick={() => scrollToSection('faq')}
-              className="text-foreground hover:text-primary transition-colors"
-            >
-              FAQ
-            </button>
-            <button 
-              onClick={() => scrollToSection('about-creator')}
-              className="text-foreground hover:text-primary transition-colors"
-            >
-              About the Creator
-            </button>
-            <button 
-              onClick={() => scrollToSection('contact')}
-              className="text-foreground hover:text-primary transition-colors"
-            >
-              Contact
-            </button>
-          </nav>
-
-          {/* Desktop Language Dropdown */}
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild className="hidden md:flex">
-              <Button variant="outline" size="sm" className="gap-2">
-                {currentLanguage}
-                <ChevronDown className="h-4 w-4" />
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end" className="bg-background border">
-              {languages.map((language) => (
-                <DropdownMenuItem
-                  key={language}
-                  onClick={() => handleLanguageChange(language)}
-                  className={currentLanguage === language ? 'text-primary font-medium' : ''}
-                >
-                  {language}
-                </DropdownMenuItem>
-              ))}
-            </DropdownMenuContent>
-          </DropdownMenu>
-
-          {/* Mobile Menu */}
+          {/* Hamburger Menu for all screen sizes */}
           <Sheet>
-            <SheetTrigger asChild className="md:hidden">
+            <SheetTrigger asChild>
               <Button variant="outline" size="sm">
                 <Menu className="h-4 w-4" />
               </Button>
@@ -144,7 +83,7 @@ const Header = () => {
                   Contact
                 </button>
                 
-                {/* Mobile Language Selector */}
+                {/* Language Selector */}
                 <div className="border-t pt-4 mt-4">
                   <p className="text-sm font-medium text-muted-foreground mb-3">Language</p>
                   <div className="flex flex-col space-y-2">
