@@ -8,26 +8,26 @@ const Hero = () => {
       
       {/* Gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-trust-blue/80 to-secondary/80"></div>
-      <div className="container mx-auto max-w-4xl relative z-10 flex justify-start pl-8">
-        <div className="bg-white rounded-2xl p-4 md:p-6 shadow-2xl max-w-lg">
-          <div className="text-center space-y-4 md:space-y-6">
+      <div className="container mx-auto max-w-6xl relative z-10">
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
+          <div className="space-y-6 md:space-y-8">
             <div>
-              <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 md:mb-4 leading-tight">
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4 md:mb-6 leading-tight">
                 Dr.Holesto
               </h1>
-              <p className="text-sm md:text-base lg:text-lg text-gray-700 mb-4 md:mb-6 leading-relaxed">
+              <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground mb-6 md:mb-8 leading-relaxed">
                 Your personal nutrition assistant based on blood analysis
               </p>
-              <p className="text-xs md:text-sm text-gray-600 mb-4 md:mb-6 leading-relaxed">
+              <p className="text-base md:text-lg text-foreground mb-6 md:mb-8 leading-relaxed">
                 A smart Telegram bot that helps you understand what's happening inside your body — 
                 and shows you how to eat in a way that truly fits your current health.
               </p>
             </div>
             
-            <div className="flex flex-col gap-2 md:gap-3 justify-center">
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
               <Button 
-                size="sm" 
-                className="text-sm md:text-base px-4 md:px-6 py-2 md:py-3 transition-all duration-300 hover:shadow-lg hover:scale-105"
+                size="lg" 
+                className="text-base md:text-lg px-6 md:px-8 py-4 md:py-6 transition-all duration-300 hover:shadow-lg hover:scale-105"
                 asChild
               >
                 <a href="https://t.me/DrHolestoBot" target="_blank" rel="noopener noreferrer">
@@ -37,14 +37,24 @@ const Hero = () => {
               
               <Button 
                 variant="outline" 
-                size="sm" 
-                className="text-sm md:text-base px-4 md:px-6 py-2 md:py-3 transition-all duration-300 hover:bg-primary hover:text-primary-foreground border-gray-300 text-gray-700 hover:border-primary"
+                size="lg" 
+                className="text-base md:text-lg px-6 md:px-8 py-4 md:py-6 transition-all duration-300 hover:bg-primary hover:text-primary-foreground"
                 asChild
               >
                 <a href="https://holesto.sportomatics.com" target="_blank" rel="noopener noreferrer">
                   Learn More
                 </a>
               </Button>
+            </div>
+          </div>
+          
+          <div className="relative">
+            <div className="rounded-2xl overflow-hidden shadow-2xl">
+              <img 
+                src="/lovable-uploads/4c7e2437-f753-4ceb-b12a-a343edd6459b.png" 
+                alt="Doctor holding cholesterol chart" 
+                className="w-full h-auto object-cover"
+              />
             </div>
           </div>
         </div>
