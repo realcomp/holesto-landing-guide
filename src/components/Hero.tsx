@@ -25,7 +25,7 @@ const Hero = () => {
                 className="text-base md:text-lg px-6 md:px-8 py-4 md:py-6 transition-all duration-300 hover:shadow-lg hover:scale-105"
                 asChild
               >
-                <a href="https://t.me/DrHolestoBot" target="_blank" rel="noopener noreferrer">
+                <a href="https://t.me/holesto_bot" target="_blank" rel="noopener noreferrer">
                   Try Dr.Holesto Bot
                 </a>
               </Button>

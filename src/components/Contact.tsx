@@ -19,8 +19,8 @@ const Contact = () => {
                 Telegram Bot
               </h3>
               <Button variant="outline" className="w-full" asChild>
-                <a href="https://t.me/DrHolestoBot" target="_blank" rel="noopener noreferrer">
-                  @DrHolestoBot
+                <a href="https://t.me/holesto_bot" target="_blank" rel="noopener noreferrer">
+                  @holesto_bot
                 </a>
               </Button>
             </CardContent>
@@ -57,7 +57,7 @@ const Contact = () => {
         
         <div className="text-center mt-16">
           <Button size="lg" className="text-lg px-8 py-6" asChild>
-            <a href="https://t.me/DrHolestoBot" target="_blank" rel="noopener noreferrer">
+            <a href="https://t.me/holesto_bot" target="_blank" rel="noopener noreferrer">
               Start Using Dr.Holesto Today
             </a>
           </Button>
