@@ -8,26 +8,26 @@ const Hero = () => {
       
       {/* Gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-trust-blue/80 to-secondary/80"></div>
-      <div className="container mx-auto max-w-4xl relative z-10 flex justify-center">
-        <div className="bg-white rounded-2xl p-8 md:p-12 shadow-2xl max-w-3xl">
-          <div className="text-center space-y-6 md:space-y-8">
+      <div className="container mx-auto max-w-4xl relative z-10 flex justify-start pl-8">
+        <div className="bg-white rounded-2xl p-4 md:p-6 shadow-2xl max-w-lg">
+          <div className="text-center space-y-4 md:space-y-6">
             <div>
-              <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 md:mb-6 leading-tight">
+              <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 md:mb-4 leading-tight">
                 Dr.Holesto
               </h1>
-              <p className="text-lg md:text-xl lg:text-2xl text-gray-700 mb-6 md:mb-8 leading-relaxed">
+              <p className="text-sm md:text-base lg:text-lg text-gray-700 mb-4 md:mb-6 leading-relaxed">
                 Your personal nutrition assistant based on blood analysis
               </p>
-              <p className="text-base md:text-lg text-gray-600 mb-6 md:mb-8 leading-relaxed">
+              <p className="text-xs md:text-sm text-gray-600 mb-4 md:mb-6 leading-relaxed">
                 A smart Telegram bot that helps you understand what's happening inside your body — 
                 and shows you how to eat in a way that truly fits your current health.
               </p>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
+            <div className="flex flex-col gap-2 md:gap-3 justify-center">
               <Button 
-                size="lg" 
-                className="text-base md:text-lg px-6 md:px-8 py-4 md:py-6 transition-all duration-300 hover:shadow-lg hover:scale-105"
+                size="sm" 
+                className="text-sm md:text-base px-4 md:px-6 py-2 md:py-3 transition-all duration-300 hover:shadow-lg hover:scale-105"
                 asChild
               >
                 <a href="https://t.me/DrHolestoBot" target="_blank" rel="noopener noreferrer">
@@ -37,8 +37,8 @@ const Hero = () => {
               
               <Button 
                 variant="outline" 
-                size="lg" 
-                className="text-base md:text-lg px-6 md:px-8 py-4 md:py-6 transition-all duration-300 hover:bg-primary hover:text-primary-foreground border-gray-300 text-gray-700 hover:border-primary"
+                size="sm" 
+                className="text-sm md:text-base px-4 md:px-6 py-2 md:py-3 transition-all duration-300 hover:bg-primary hover:text-primary-foreground border-gray-300 text-gray-700 hover:border-primary"
                 asChild
               >
                 <a href="https://holesto.sportomatics.com" target="_blank" rel="noopener noreferrer">
