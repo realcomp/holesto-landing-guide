@@ -15,7 +15,7 @@ const AboutCreator = () => {
             <img 
               src="/lovable-uploads/4db38e6e-73d7-4044-8ae5-03ba35a04b2e.png" 
               alt="Dmitry Braverman at Olympic & 226 Sochi 2018 triathlon finish line" 
-              className="w-full h-64 object-cover"
+              className="w-full h-64 object-contain"
             />
             <CardContent className="p-8">
               <p className="text-sm md:text-lg text-muted-foreground leading-relaxed mb-6">
