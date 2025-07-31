@@ -2,27 +2,27 @@ import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-trust-blue to-secondary px-6 py-20 pt-32">
+    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-trust-blue to-secondary px-4 md:px-6 py-12 md:py-20 pt-24 md:pt-32">
       <div className="container mx-auto max-w-6xl">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8">
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
+          <div className="space-y-6 md:space-y-8">
             <div>
-              <h1 className="text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4 md:mb-6 leading-tight">
                 Dr.Holesto
               </h1>
-              <p className="text-xl lg:text-2xl text-muted-foreground mb-8 leading-relaxed">
+              <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground mb-6 md:mb-8 leading-relaxed">
                 Your personal nutrition assistant based on blood analysis
               </p>
-              <p className="text-lg text-foreground mb-8 leading-relaxed">
+              <p className="text-base md:text-lg text-foreground mb-6 md:mb-8 leading-relaxed">
                 A smart Telegram bot that helps you understand what's happening inside your body — 
                 and shows you how to eat in a way that truly fits your current health.
               </p>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
               <Button 
                 size="lg" 
-                className="text-lg px-8 py-6 transition-all duration-300 hover:shadow-lg hover:scale-105"
+                className="text-base md:text-lg px-6 md:px-8 py-4 md:py-6 transition-all duration-300 hover:shadow-lg hover:scale-105"
                 asChild
               >
                 <a href="https://t.me/DrHolestoBot" target="_blank" rel="noopener noreferrer">
@@ -33,7 +33,7 @@ const Hero = () => {
               <Button 
                 variant="outline" 
                 size="lg" 
-                className="text-lg px-8 py-6 transition-all duration-300 hover:bg-primary hover:text-primary-foreground"
+                className="text-base md:text-lg px-6 md:px-8 py-4 md:py-6 transition-all duration-300 hover:bg-primary hover:text-primary-foreground"
                 asChild
               >
                 <a href="https://holesto.sportomatics.com" target="_blank" rel="noopener noreferrer">

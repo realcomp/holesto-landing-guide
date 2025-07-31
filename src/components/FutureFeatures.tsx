@@ -12,7 +12,7 @@ const FutureFeatures = () => {
   ];
 
   return (
-    <section className="py-20 px-6 bg-background">
+    <section className="py-12 md:py-20 px-4 md:px-6 bg-background">
       <div className="container mx-auto max-w-4xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-foreground mb-6">

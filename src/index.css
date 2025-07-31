@@ -112,3 +112,23 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 }
+
+/* Utility classes */
+.section-padding {
+  @apply py-12 md:py-20;
+}
+
+.container-padding {
+  @apply px-4 md:px-6;
+}
+
+/* Mobile responsive text sizes */
+@media (max-width: 768px) {
+  .mobile-text-sm { font-size: 0.875rem; }
+  .mobile-text-base { font-size: 0.9rem; }
+  .mobile-text-lg { font-size: 1rem; }
+  .mobile-text-xl { font-size: 1.125rem; }
+  .mobile-text-2xl { font-size: 1.25rem; }
+  .mobile-text-3xl { font-size: 1.5rem; }
+  .mobile-text-4xl { font-size: 1.875rem; }
+}
