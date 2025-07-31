@@ -20,7 +20,7 @@ export const useContent = () => {
     const fetchContent = async () => {
       try {
         setIsLoading(true);
-        const { data, error } = await supabase
+        const { data, error } = await (supabase as any)
           .from('site_content')
           .select('content_key, translations');
 
