@@ -6,14 +6,14 @@ const Hero = () => {
       <div className="container mx-auto max-w-6xl relative z-10">
         <div className="flex items-center">
           <div className="space-y-6 md:space-y-8">
-            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-lg w-96">
-              <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 md:mb-6 leading-tight">
+            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-4 md:p-8 shadow-lg w-[300px] md:w-96">
+              <h1 className="text-2xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-3 md:mb-6 leading-tight">
                 Dr.Holesto
               </h1>
-              <p className="text-lg md:text-xl lg:text-2xl text-gray-700 mb-6 md:mb-8 leading-relaxed">
+              <p className="text-base md:text-xl lg:text-2xl text-gray-700 mb-4 md:mb-8 leading-relaxed">
                 Your personal nutrition assistant based on blood analysis
               </p>
-              <p className="text-base md:text-lg text-gray-800 mb-0 leading-relaxed">
+              <p className="text-sm md:text-lg text-gray-800 mb-0 leading-relaxed">
                 A smart Telegram bot that helps you understand what's happening inside your body — 
                 and shows you how to eat in a way that truly fits your current health.
               </p>
