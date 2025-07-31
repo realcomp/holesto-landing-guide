@@ -1,19 +1,24 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
-import { Menu, ChevronDown } from "lucide-react";
+import { Menu } from "lucide-react";
+import { useLanguage, Language } from "@/contexts/LanguageContext";
+import { useContent } from "@/hooks/useContent";
 
 const Header = () => {
-  const [currentLanguage, setCurrentLanguage] = useState("English");
+  const { language, setLanguage } = useLanguage();
+  const { getText } = useContent();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const languages = ["English", "Русский", "עברית"];
+  const languages: { code: Language; name: string }[] = [
+    { code: 'en', name: 'English' },
+    { code: 'ru', name: 'Русский' },
+    { code: 'he', name: 'עברית' }
+  ];
 
-  const handleLanguageChange = (language: string) => {
-    setCurrentLanguage(language);
+  const handleLanguageChange = (langCode: Language) => {
+    setLanguage(langCode);
     setIsMenuOpen(false);
-    // Language change logic would go here
   };
 
   const scrollToTop = () => {
@@ -54,54 +59,56 @@ const Header = () => {
                   onClick={() => scrollToSection('how-it-works')}
                   className="text-left text-foreground hover:text-primary transition-colors p-2 rounded-md hover:bg-muted"
                 >
-                  How It Works
+                  {getText('header.how_it_works', 'How It Works')}
                 </button>
                 <button 
                   onClick={() => scrollToSection('why-it-matters')}
                   className="text-left text-foreground hover:text-primary transition-colors p-2 rounded-md hover:bg-muted"
                 >
-                  Why This Matters
+                  {getText('header.why_it_matters', 'Why This Matters')}
                 </button>
                 <button 
                   onClick={() => scrollToSection('sample-responses')}
                   className="text-left text-foreground hover:text-primary transition-colors p-2 rounded-md hover:bg-muted"
                 >
-                  Sample Responses
+                  {getText('header.sample_responses', 'Sample Responses')}
                 </button>
                 <button 
                   onClick={() => scrollToSection('faq')}
                   className="text-left text-foreground hover:text-primary transition-colors p-2 rounded-md hover:bg-muted"
                 >
-                  FAQ
+                  {getText('header.faq', 'FAQ')}
                 </button>
                 <button 
                   onClick={() => scrollToSection('about-creator')}
                   className="text-left text-foreground hover:text-primary transition-colors p-2 rounded-md hover:bg-muted"
                 >
-                  About the Creator
+                  {getText('header.about_creator', 'About the Creator')}
                 </button>
                 <button 
                   onClick={() => scrollToSection('contact')}
                   className="text-left text-foreground hover:text-primary transition-colors p-2 rounded-md hover:bg-muted"
                 >
-                  Contact
+                  {getText('header.contact', 'Contact')}
                 </button>
                 
                 {/* Language Selector */}
                 <div className="border-t pt-4 mt-4">
-                  <p className="text-sm font-medium text-muted-foreground mb-3">Language</p>
+                  <p className="text-sm font-medium text-muted-foreground mb-3">
+                    {getText('header.language', 'Language')}
+                  </p>
                   <div className="flex flex-col space-y-2">
-                    {languages.map((language) => (
+                    {languages.map((lang) => (
                       <button
-                        key={language}
-                        onClick={() => handleLanguageChange(language)}
+                        key={lang.code}
+                        onClick={() => handleLanguageChange(lang.code)}
                         className={`text-left p-2 rounded-md transition-colors ${
-                          currentLanguage === language
+                          language === lang.code
                             ? 'text-primary font-medium bg-muted'
                             : 'text-foreground hover:text-primary hover:bg-muted'
                         }`}
                       >
-                        {language}
+                        {lang.name}
                       </button>
                     ))}
                   </div>
