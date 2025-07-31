@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
+import { useContent } from "@/hooks/useContent";
 
 const Hero = () => {
+  const { getText } = useContent();
   return (
     <section className="relative min-h-screen flex items-center justify-center px-4 md:px-6 py-12 md:py-20 pt-24 md:pt-32 bg-cover bg-center bg-no-repeat" style={{backgroundImage: 'url(/lovable-uploads/92a8f5fa-d518-4c43-93b4-4246b94af40e.png)'}}>
       <div className="container mx-auto max-w-6xl relative z-10">
@@ -11,11 +13,10 @@ const Hero = () => {
                 Dr.Holesto
               </h1>
               <p className="text-base md:text-xl lg:text-2xl text-gray-700 mb-4 md:mb-8 leading-relaxed">
-                Your personal nutrition assistant based on blood analysis
+                {getText('hero.subtitle', 'Your personal nutrition assistant based on blood analysis')}
               </p>
               <p className="text-sm md:text-lg text-gray-800 mb-0 leading-relaxed">
-                A smart Telegram bot that helps you understand what's happening inside your body — 
-                and shows you how to eat in a way that truly fits your current health.
+                {getText('hero.description', 'A smart Telegram bot that helps you understand what\'s happening inside your body — and shows you how to eat in a way that truly fits your current health.')}
               </p>
             </div>
             
@@ -26,7 +27,7 @@ const Hero = () => {
                 asChild
               >
                 <a href="https://t.me/holesto_bot" target="_blank" rel="noopener noreferrer">
-                  Try Dr.Holesto Bot
+                  {getText('hero.try_bot', 'Try Dr.Holesto Bot')}
                 </a>
               </Button>
               
@@ -37,7 +38,7 @@ const Hero = () => {
                 asChild
               >
                 <a href="https://holesto.sportomatics.com" target="_blank" rel="noopener noreferrer">
-                  Learn More
+                  {getText('hero.learn_more', 'Learn More')}
                 </a>
               </Button>
             </div>

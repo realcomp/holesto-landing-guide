@@ -1,20 +1,23 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { useContent } from "@/hooks/useContent";
 
 const WhoItsFor = () => {
+  const { getText } = useContent();
+  
   const targetUsers = [
     {
-      title: "People with lab results",
-      description: "Have blood test results but don't know what to do with them",
+      title: getText('who_its_for.lab_results.title', 'People with lab results'),
+      description: getText('who_its_for.lab_results.description', 'Have blood test results but don\'t know what to do with them'),
       icon: "📋"
     },
     {
-      title: "Patients undergoing treatment", 
-      description: "Want to align their diet with medical therapy",
+      title: getText('who_its_for.patients.title', 'Patients undergoing treatment'), 
+      description: getText('who_its_for.patients.description', 'Want to align their diet with medical therapy'),
       icon: "💊"
     },
     {
-      title: "Health-conscious individuals",
-      description: "Healthy people who want to stay that way",
+      title: getText('who_its_for.health_conscious.title', 'Health-conscious individuals'),
+      description: getText('who_its_for.health_conscious.description', 'Healthy people who want to stay that way'),
       icon: "💪"
     }
   ];
@@ -24,7 +27,7 @@ const WhoItsFor = () => {
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-foreground mb-6">
-            Who Is It For?
+            {getText('who_its_for.title', 'Who Is It For?')}
           </h2>
         </div>
         

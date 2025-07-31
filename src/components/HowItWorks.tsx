@@ -1,21 +1,24 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { useContent } from "@/hooks/useContent";
 
 const HowItWorks = () => {
+  const { getText } = useContent();
+  
   const steps = [
     {
       number: "1",
-      title: "Analyzes your blood test",
-      description: "Just send the bot a PDF or photo — it will automatically recognize your values, highlight key metrics, and identify abnormalities."
+      title: getText('how_it_works.step1.title', 'Analyzes your blood test'),
+      description: getText('how_it_works.step1.description', 'Just send the bot a PDF or photo — it will automatically recognize your values, highlight key metrics, and identify abnormalities.')
     },
     {
       number: "2", 
-      title: "Provides personalized recommendations",
-      description: "The bot explains which values are outside the normal range, what they mean, and gives you specific goals — lower cholesterol, support your thyroid, boost metabolism, etc. Then it offers 5–7 clear recommendations: what to eat, what to avoid, how to adjust your diet without extremes."
+      title: getText('how_it_works.step2.title', 'Provides personalized recommendations'),
+      description: getText('how_it_works.step2.description', 'The bot explains which values are outside the normal range, what they mean, and gives you specific goals — lower cholesterol, support your thyroid, boost metabolism, etc. Then it offers 5–7 clear recommendations: what to eat, what to avoid, how to adjust your diet without extremes.')
     },
     {
       number: "3",
-      title: "Helps you choose what to eat every day",
-      description: "Thinking about eating something? Just send Dr.Holesto a photo of the dish — or describe it in text. The bot will assess whether it's suitable for you, explain why or why not, and suggest improvements. Like a doctor — but always available."
+      title: getText('how_it_works.step3.title', 'Helps you choose what to eat every day'),
+      description: getText('how_it_works.step3.description', 'Thinking about eating something? Just send Dr.Holesto a photo of the dish — or describe it in text. The bot will assess whether it\'s suitable for you, explain why or why not, and suggest improvements. Like a doctor — but always available.')
     }
   ];
 
@@ -24,10 +27,10 @@ const HowItWorks = () => {
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-10 md:mb-16">
           <h2 className="text-2xl md:text-4xl font-bold text-foreground mb-4 md:mb-6">
-            How It Works
+            {getText('how_it_works.title', 'How It Works')}
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground">
-            Three simple steps to personalized nutrition
+            {getText('how_it_works.subtitle', 'Three simple steps to personalized nutrition')}
           </p>
         </div>
         
