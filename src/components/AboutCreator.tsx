@@ -11,7 +11,12 @@ const AboutCreator = () => {
         </div>
         
         <div className="space-y-8">
-          <Card className="border-2 border-primary/20">
+          <Card className="border-2 border-primary/20 overflow-hidden">
+            <img 
+              src="/lovable-uploads/4db38e6e-73d7-4044-8ae5-03ba35a04b2e.png" 
+              alt="Dmitry Braverman at Olympic & 226 Sochi 2018 triathlon finish line" 
+              className="w-full h-64 object-cover"
+            />
             <CardContent className="p-8">
               <p className="text-sm md:text-lg text-muted-foreground leading-relaxed mb-6">
                 Hi, I'm Dmitry Braverman — a product and project manager with over 20 years of experience building digital products. I've launched and scaled solutions across media, fintech, automation, e-commerce, and advertising. I've led cross-functional teams, overseen end-to-end development, managed budgets up to $300,000, and delivered products that combine strong UX with real-world impact.
