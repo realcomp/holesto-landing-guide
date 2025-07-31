@@ -6,16 +6,19 @@ import { Menu, ChevronDown } from "lucide-react";
 
 const Header = () => {
   const [currentLanguage, setCurrentLanguage] = useState("English");
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const languages = ["English", "Русский", "עברית"];
 
   const handleLanguageChange = (language: string) => {
     setCurrentLanguage(language);
+    setIsMenuOpen(false);
     // Language change logic would go here
   };
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+    setIsMenuOpen(false);
   };
 
   const scrollToSection = (sectionId: string) => {
@@ -23,6 +26,7 @@ const Header = () => {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+    setIsMenuOpen(false);
   };
 
   return (
@@ -38,7 +42,7 @@ const Header = () => {
           </button>
 
           {/* Hamburger Menu for all screen sizes */}
-          <Sheet>
+          <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
             <SheetTrigger asChild>
               <Button variant="outline" size="sm">
                 <Menu className="h-4 w-4" />
