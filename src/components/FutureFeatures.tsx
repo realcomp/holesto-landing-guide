@@ -1,6 +1,8 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { useContent } from "@/hooks/useContent";
 
 const FutureFeatures = () => {
+  const { getText } = useContent();
   const features = [
     "Support for multiple blood tests with history",
     "Tracking weight, height, and activity",
@@ -16,10 +18,10 @@ const FutureFeatures = () => {
       <div className="container mx-auto max-w-4xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-foreground mb-6">
-            What's Planned
+            {getText('future_features.title')}
           </h2>
           <p className="text-xl text-muted-foreground">
-            Exciting features coming soon
+            {getText('future_features.subtitle')}
           </p>
         </div>
         

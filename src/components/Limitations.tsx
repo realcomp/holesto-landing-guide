@@ -1,6 +1,8 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { useContent } from "@/hooks/useContent";
 
 const Limitations = () => {
+  const { getText } = useContent();
   const limitations = [
     "It does not diagnose or replace doctors",
     "It cannot compare past and current tests",
@@ -15,10 +17,10 @@ const Limitations = () => {
       <div className="container mx-auto max-w-4xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-foreground mb-6">
-            What the Bot Cannot Do
+            {getText('limitations.title')}
           </h2>
           <p className="text-xl text-muted-foreground">
-            Important limitations to keep in mind
+            {getText('limitations.subtitle')}
           </p>
         </div>
         

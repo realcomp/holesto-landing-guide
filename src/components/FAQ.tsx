@@ -1,6 +1,8 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { useContent } from "@/hooks/useContent";
 
 const FAQ = () => {
+  const { getText } = useContent();
   const faqs = [
     {
       question: "Is this bot a real doctor?",
@@ -53,7 +55,7 @@ const FAQ = () => {
       <div className="container mx-auto max-w-4xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-foreground mb-6">
-            Frequently Asked Questions
+            {getText('faq.title')}
           </h2>
         </div>
         

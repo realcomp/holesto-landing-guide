@@ -1,15 +1,18 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { useContent } from "@/hooks/useContent";
 
 const SampleResponses = () => {
+  const { getText } = useContent();
+
   return (
     <section className="py-12 md:py-20 px-4 md:px-6 bg-background">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-foreground mb-6">
-            Sample Responses
+            {getText('sample_responses.title')}
           </h2>
           <p className="text-xl text-muted-foreground">
-            See how Dr.Holesto provides personalized guidance
+            {getText('sample_responses.subtitle')}
           </p>
         </div>
         
@@ -19,7 +22,7 @@ const SampleResponses = () => {
               <div className="mb-6">
                 <span className="text-2xl mb-4 block">🧪</span>
                 <h3 className="text-xl font-semibold text-foreground mb-4">
-                  After blood test analysis:
+                  {getText('sample_responses.blood_test.title')}
                 </h3>
               </div>
               
@@ -52,7 +55,7 @@ const SampleResponses = () => {
               <div className="mb-6">
                 <span className="text-2xl mb-4 block">🥗</span>
                 <h3 className="text-xl font-semibold text-foreground mb-4">
-                  After food photo:
+                  {getText('sample_responses.food_photo.title')}
                 </h3>
               </div>
               

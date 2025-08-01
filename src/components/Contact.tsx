@@ -1,13 +1,16 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { useContent } from "@/hooks/useContent";
 
 const Contact = () => {
+  const { getText } = useContent();
+
   return (
     <section className="py-12 md:py-20 px-4 md:px-6 bg-secondary/30">
       <div className="container mx-auto max-w-4xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-foreground mb-6">
-            Contact & Links
+            {getText('contact.title')}
           </h2>
         </div>
         
@@ -16,7 +19,7 @@ const Contact = () => {
             <CardContent className="p-6 text-center">
               <div className="text-3xl mb-4">🤖</div>
               <h3 className="text-lg font-semibold text-foreground mb-4">
-                Telegram Bot
+                {getText('contact.telegram.title')}
               </h3>
               <Button variant="outline" className="w-full" asChild>
                 <a href="https://t.me/holesto_bot" target="_blank" rel="noopener noreferrer">
@@ -30,7 +33,7 @@ const Contact = () => {
             <CardContent className="p-6 text-center">
               <div className="text-3xl mb-4">🌐</div>
               <h3 className="text-lg font-semibold text-foreground mb-4">
-                Website
+                {getText('contact.website.title')}
               </h3>
               <Button variant="outline" className="w-full" asChild>
                 <a href="https://holesto.sportomatics.com" target="_blank" rel="noopener noreferrer">
@@ -44,7 +47,7 @@ const Contact = () => {
             <CardContent className="p-6 text-center">
               <div className="text-3xl mb-4">📧</div>
               <h3 className="text-lg font-semibold text-foreground mb-4">
-                Email Support
+                {getText('contact.email.title')}
               </h3>
               <Button variant="outline" className="w-full" asChild>
                 <a href="mailto:admin@sportomatics.com">
@@ -58,7 +61,7 @@ const Contact = () => {
         <div className="text-center mt-16">
           <Button size="lg" className="text-lg px-8 py-6" asChild>
             <a href="https://t.me/holesto_bot" target="_blank" rel="noopener noreferrer">
-              Start Using Dr.Holesto Today
+              {getText('contact.cta')}
             </a>
           </Button>
         </div>
