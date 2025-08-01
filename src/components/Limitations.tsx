@@ -4,12 +4,12 @@ import { useContent } from "@/hooks/useContent";
 const Limitations = () => {
   const { getText } = useContent();
   const limitations = [
-    "It does not diagnose or replace doctors",
-    "It cannot compare past and current tests",
-    "It does not support multiple users in one chat",
-    "It does not give medication advice",
-    "It cannot accurately estimate calories or composition from photos — it's just an approximation",
-    "It doesn't remember your past questions (yet)"
+    getText('limitations.not_doctor', 'It does not diagnose or replace doctors'),
+    getText('limitations.no_comparison', 'It cannot compare past and current tests'),
+    getText('limitations.single_user', 'It does not support multiple users in one chat'),
+    getText('limitations.no_medication', 'It does not give medication advice'),
+    getText('limitations.calorie_estimation', 'It cannot accurately estimate calories or composition from photos — it\'s just an approximation'),
+    getText('limitations.no_memory', 'It doesn\'t remember your past questions (yet)')
   ];
 
   return (

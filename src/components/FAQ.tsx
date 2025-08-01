@@ -5,48 +5,48 @@ const FAQ = () => {
   const { getText } = useContent();
   const faqs = [
     {
-      question: "Is this bot a real doctor?",
-      answer: "No. It's an AI-powered assistant. It provides smart and helpful suggestions, but it's not a replacement for professional medical advice. Always consult your physician for final decisions."
+      question: getText('faq.q1', 'Is this bot a real doctor?'),
+      answer: getText('faq.a1', 'No, Dr.Holesto is not a doctor and cannot replace medical consultation.')
     },
     {
-      question: "I want to replace my blood test",
-      answer: "Use the /blood delete command. After deletion, the bot switches to general mode based on data from an average healthy person. Food photo analysis will be disabled until you upload a new blood test."
+      question: getText('faq.q2', 'I want to replace my blood test'),
+      answer: getText('faq.a2', 'You can upload a new blood test anytime.')
     },
     {
-      question: "Why doesn't the bot accept food photos I send?",
-      answer: "Most likely, you haven't uploaded your blood test. Without it, the bot works in text-only mode based on general health data. Food image analysis will remain unavailable until a new test is uploaded."
+      question: getText('faq.q3', 'Why doesn\'t the bot accept food photos I send?'),
+      answer: getText('faq.a3', 'Make sure you\'ve uploaded your blood test first.')
     },
     {
-      question: "I uploaded a blood test photo, but it wasn't recognized correctly",
-      answer: "Photo-based recognition can sometimes fail. For best results, send a PDF or a clear scan. Screenshots from online medical portals also work."
+      question: getText('faq.q4', 'I uploaded a blood test photo, but it wasn\'t recognized correctly'),
+      answer: getText('faq.a4', 'Try uploading a clearer photo or a PDF version.')
     },
     {
-      question: "How do I know which commands are available?",
-      answer: "Send /help — the bot will show you all available options and instructions."
+      question: getText('faq.q5', 'How do I know which commands are available?'),
+      answer: getText('faq.a5', 'Just type /help in the bot.')
     },
     {
-      question: "Can I use the bot for someone else?",
-      answer: "Technically yes, but not recommended. Recommendations are based on personal data. Each user should ideally use their own account and test results."
+      question: getText('faq.q6', 'Can I use the bot for someone else?'),
+      answer: getText('faq.a6', 'Each chat session is designed for one person.')
     },
     {
-      question: "What languages does the bot support?",
-      answer: "Any languages. Just send the language name, e.g., \"русский\", \"English\", \"français\" — and the bot will switch."
+      question: getText('faq.q7', 'What languages does the bot support?'),
+      answer: getText('faq.a7', 'Dr.Holesto works in multiple languages.')
     },
     {
-      question: "Can I upload multiple tests?",
-      answer: "No. Only one active blood test per user is supported. Uploading a new test automatically deletes the previous one."
+      question: getText('faq.q8', 'Can I upload multiple tests?'),
+      answer: getText('faq.a8', 'Currently, the bot works with one test at a time.')
     },
     {
-      question: "The bot is buggy or unresponsive. What should I do?",
-      answer: "Try /start to reset the session. If issues persist — contact admin@sportomatics.com"
+      question: getText('faq.q9', 'The bot is buggy or unresponsive. What should I do?'),
+      answer: getText('faq.a9', 'Try restarting the conversation with /start.')
     },
     {
-      question: "Is my data confidential?",
-      answer: "Yes. Blood tests and messages are processed automatically and not shared with third parties. You can delete your data anytime with /blood delete."
+      question: getText('faq.q10', 'Is my data confidential?'),
+      answer: getText('faq.a10', 'Yes, your health data is processed securely.')
     },
     {
-      question: "How do I ask food-related questions?",
-      answer: "Just send a photo of the food you plan to eat — or describe it in text. You'll get a personalized recommendation in a few seconds."
+      question: getText('faq.q11', 'How do I ask food-related questions?'),
+      answer: getText('faq.a11', 'Just send a photo of the food you plan to eat.')
     }
   ];
 

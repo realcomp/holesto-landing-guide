@@ -6,18 +6,18 @@ const WhoItsFor = () => {
   
   const targetUsers = [
     {
-      title: getText('who_its_for.lab_results.title', 'People with lab results'),
-      description: getText('who_its_for.lab_results.description', 'Have blood test results but don\'t know what to do with them'),
+      title: getText('who_its_for.chronic_conditions.title', 'People with lab results'),
+      description: getText('who_its_for.chronic_conditions.description', 'Have blood test results but don\'t know what to do with them'),
       icon: "📋"
     },
     {
-      title: getText('who_its_for.patients.title', 'Patients undergoing treatment'), 
-      description: getText('who_its_for.patients.description', 'Want to align their diet with medical therapy'),
+      title: getText('who_its_for.weight_management.title', 'Patients undergoing treatment'), 
+      description: getText('who_its_for.weight_management.description', 'Want to align their diet with medical therapy'),
       icon: "💊"
     },
     {
-      title: getText('who_its_for.health_conscious.title', 'Health-conscious individuals'),
-      description: getText('who_its_for.health_conscious.description', 'Healthy people who want to stay that way'),
+      title: getText('who_its_for.health_enthusiasts.title', 'Health-conscious individuals'),
+      description: getText('who_its_for.health_enthusiasts.description', 'Healthy people who want to stay that way'),
       icon: "💪"
     }
   ];
