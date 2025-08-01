@@ -48,9 +48,19 @@ export const useContent = () => {
     const translations = content[key];
     if (!translations) {
       console.warn(`Content key "${key}" not found`);
-      return fallback || key;
+      return fallback || `[${key}]`;
     }
-    return translations[language] || translations.en || fallback || key;
+    
+    // Get the translation for the current language
+    const currentTranslation = translations[language];
+    
+    // If the current language translation exists and is not empty, use it
+    if (currentTranslation && currentTranslation.trim() !== '') {
+      return currentTranslation;
+    }
+    
+    // If no translation for current language or it's empty, show placeholder
+    return fallback || `[${key}]`;
   };
 
   return { getText, isLoading, error };
